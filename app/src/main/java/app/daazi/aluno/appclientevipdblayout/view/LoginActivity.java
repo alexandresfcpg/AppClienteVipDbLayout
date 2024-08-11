@@ -9,12 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.shashank.sony.fancydialoglib.FancyAlertDialog;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText editEmail, editSenha;
     CheckBox ckLembrar;
     Button btnAcessar;
+    ImageView imgBackground, imgLogo;
 
     boolean isFormularioOK, isLembrarSenha;
 
@@ -44,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_novo);
 
         initFormulario();
+
+        loadImagens();
 
         btnAcessar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +145,8 @@ public class LoginActivity extends AppCompatActivity {
         ckLembrar = findViewById(R.id.ckLembrar);
         btnAcessar = findViewById(R.id.btnAcessar);
         btnSejaVip = findViewById(R.id.btnSejaVip);
+        imgBackground = findViewById(R.id.imgBackground);
+        imgLogo = findViewById(R.id.imgLogo);
 
         isFormularioOK = false;
 
@@ -170,6 +177,13 @@ public class LoginActivity extends AppCompatActivity {
         //List<Cliente> clientes = controller.listar();
 
         restaurarSharedPreferences();
+    }
+
+    private void loadImagens() {
+
+        Picasso.get().load(AppUtil.URL_IMG_BACKGROUND).placeholder(R.drawable.carregando_animacao).into(imgBackground);
+        Picasso.get().load(AppUtil.URL_IMG_LOGO).placeholder(R.drawable.carregando_animacao).into(imgLogo);
+
     }
 
     public void lembrarSenha(View view) {
