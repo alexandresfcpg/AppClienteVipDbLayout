@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.ClienteVipActivity">
+    tools:context=".view.CredencialDeAcessoActivity">
 
     <!-- Cabeçalho -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="4dp"
         app:cardElevation="8dp">
 
@@ -49,20 +52,20 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/txtNovoVip"
+                        android:id="@+id/txtCadastro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txtNovoVip"
+                        android:text="@string/txtFinalizacaoCadastro"
                         android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="20sp"
+                        android:textSize="20dp"
                         android:textStyle="bold" />
+
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -72,7 +75,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="4dp"
         app:cardElevation="8dp">
 
@@ -84,58 +90,99 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtPrimeiroNome"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="@string/txtPrimeiroNome"
+                android:text="@string/txtNome"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editPrimeiroNome"
+                android:id="@+id/editNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:ems="10"
+                android:enabled="false"
                 android:hint="@string/txtHintNome"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/colorAzul" />
 
             <TextView
-                android:id="@+id/txtSobrenome"
+                android:id="@+id/txtEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="@string/txtSobreNome"
+                android:text="@string/txtEmail"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editSobrenome"
+                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:ems="10"
-                android:hint="@string/txtHintSobreNome"
-                android:inputType="text" />
+                android:hint="@string/txtHintEmail"
+                android:inputType="textEmailAddress" />
 
-            <CheckBox
-                android:id="@+id/ckPessoaFisica"
+            <TextView
+                android:id="@+id/txtSenhaA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/txtSenhaA"
+                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editSenhaA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
-                android:onClick="pessoaFisica"
-                android:text="@string/txtPessoaFisica"
+                android:ems="10"
+                android:hint="@string/txtHintSenhaA"
+                android:inputType="numberPassword" />
+
+            <TextView
+                android:id="@+id/txtSenhaB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/txtSenhaB"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
+                android:textColor="@color/primaryTextColor"
                 android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editSenhaB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:ems="10"
+                android:hint="@string/txtHintSenhaB"
+                android:inputType="numberPassword" />
+
+            <CheckBox
+                android:id="@+id/ckTermo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:onClick="validarTermo"
+                android:text="@string/txtTermo"
+                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold" />
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -146,7 +193,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="4dp"
         app:cardElevation="8dp">
 
@@ -158,29 +208,20 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnSalvarContinuar"
+                android:id="@+id/btnCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/btnSalvarContinuar"
-                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
-
-            <Button
-                android:id="@+id/btnCancelar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/btnCancelar"
+                android:layout_marginEnd="16dp"
+                android:text="@string/btnCadastro"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.cardview.widget.CardView>
 
+    </androidx.cardview.widget.CardView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

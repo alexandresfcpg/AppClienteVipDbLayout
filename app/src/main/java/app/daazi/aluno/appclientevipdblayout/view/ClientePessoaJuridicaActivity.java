@@ -38,7 +38,7 @@ public class ClientePessoaJuridicaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cliente_pessoa_juridica);
+        setContentView(R.layout.activity_cliente_pessoa_juridica_card);
 
         initFormulario();
 

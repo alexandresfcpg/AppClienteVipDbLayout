@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.ClienteVipActivity">
+    tools:context=".view.RecuperarSenhaActivity">
 
     <!-- Cabeçalho -->
     <androidx.cardview.widget.CardView
@@ -49,20 +49,19 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/txtNovoVip"
+                        android:id="@+id/txtRecuperar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txtNovoVip"
-                        android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
+                        android:text="@string/txtRecuperarSenha"
+                        android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
+
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -84,61 +83,28 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtPrimeiroNome"
+                android:id="@+id/txtEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="@string/txtPrimeiroNome"
+                android:text="@string/txtEmail"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editPrimeiroNome"
+                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:ems="10"
-                android:hint="@string/txtHintNome"
-                android:inputType="text" />
+                android:hint="@string/txtHintEmailRecuperacao"
+                android:inputType="textEmailAddress" />
 
-            <TextView
-                android:id="@+id/txtSobrenome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/txtSobreNome"
-                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
-                android:textColor="@color/primaryTextColor"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editSobrenome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:ems="10"
-                android:hint="@string/txtHintSobreNome"
-                android:inputType="text" />
-
-            <CheckBox
-                android:id="@+id/ckPessoaFisica"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:onClick="pessoaFisica"
-                android:text="@string/txtPessoaFisica"
-                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
-                android:textStyle="bold" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.cardview.widget.CardView>
 
@@ -158,29 +124,25 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnSalvarContinuar"
+                android:id="@+id/btnRecuperar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/btnSalvarContinuar"
+                android:layout_marginTop="5dp"
+                android:text="@string/btnRecuperar"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
 
             <Button
-                android:id="@+id/btnCancelar"
+                android:id="@+id/btnVoltar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/btnCancelar"
+                android:layout_marginTop="5dp"
+                android:onClick="voltaClienteVip"
+                android:text="@string/btnVoltar"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
-
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.cardview.widget.CardView>
 
+    </androidx.cardview.widget.CardView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

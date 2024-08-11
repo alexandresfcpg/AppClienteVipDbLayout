@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.ClienteVipActivity">
+    tools:context=".view.ClientePessoaFisicaActivity">
 
     <!-- Cabeçalho -->
     <androidx.cardview.widget.CardView
@@ -45,17 +45,17 @@
                         android:text="@string/app_name"
                         android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="20sp"
+                        android:textSize="20dp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/txtNovoVip"
+                        android:id="@+id/txtClientePessoaFisica"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/txtNovoVip"
+                        android:text="@string/txtPessoaFisica"
                         android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="20sp"
+                        android:textSize="20dp"
                         android:textStyle="bold" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -65,6 +65,7 @@
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -84,61 +85,59 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtPrimeiroNome"
+                android:id="@+id/txtCpf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="@string/txtPrimeiroNome"
+                android:text="@string/txtCpf"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editPrimeiroNome"
+                android:id="@+id/editCpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:ems="10"
-                android:hint="@string/txtHintNome"
+                android:hint="@string/txtHintCpf"
                 android:inputType="text" />
 
             <TextView
-                android:id="@+id/txtSobrenome"
+                android:id="@+id/txtNomeCompleto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="@string/txtSobreNome"
+                android:text="@string/txtNomeCompleto"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editSobrenome"
+                android:id="@+id/editNomeCompleto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:ems="10"
-                android:hint="@string/txtHintSobreNome"
+                android:hint="@string/txtHintNomeCompleto"
                 android:inputType="text" />
 
-            <CheckBox
-                android:id="@+id/ckPessoaFisica"
+            <Button
+                android:id="@+id/btnSalvarContinuar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
-                android:onClick="pessoaFisica"
-                android:text="@string/txtPessoaFisica"
-                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse"
-                android:textStyle="bold" />
+                android:text="@string/btnSalvarContinuar"
+                android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.cardview.widget.CardView>
 
@@ -158,29 +157,28 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnSalvarContinuar"
+                android:id="@+id/btnVoltar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/btnSalvarContinuar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:onClick="voltaClienteVip"
+                android:text="@string/btnVoltar"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
 
             <Button
                 android:id="@+id/btnCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
                 android:text="@string/btnCancelar"
                 android:textAppearance="@android:style/TextAppearance.Holo.Large.Inverse" />
-
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.cardview.widget.CardView>
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>
