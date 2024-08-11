@@ -86,4 +86,9 @@
     <string name="txtSenhaB">Repita a senha</string>
     <string name="txtHintSenhaB">Confirme a senha digitada...</string>
     <string name="txtTermo">Li e concordo com os termos de uso e política de privacidade.</string>
+
+    <!-- texto da tela de background gradiente -->
+    <string name="txtTituloBackground">Aplicando Efeito\nBackground Gradiente</string>
+
+
 </resources>
